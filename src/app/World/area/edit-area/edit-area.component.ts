@@ -24,7 +24,7 @@ export class EditAreaComponent implements OnInit {
         private route: ActivatedRoute
     ) { }
 
-    @ViewChild('autosize') autosize: CdkTextareaAutosize;
+    @ViewChild('autosize', { static: true }) autosize: CdkTextareaAutosize;
 
     ngOnInit() {
         this.addRoomForm = this.editAreaServices.addAreaForm;

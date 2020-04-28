@@ -26,7 +26,7 @@ import {
 } from '@angular/animations';
 import { ItemSlotEnum } from 'src/app/items/interfaces/item-slot.enum';
 import { Exit } from './../interfaces/exit.interface';
-import { jsonpCallbackContext } from '@angular/common/http/src/module';
+/* import { jsonpCallbackContext } from '@angular/common/http/src/module'; */
 import { RoomExit } from './../interfaces/roomExit.interface';
 import { Room } from './../interfaces/room.interface';
 import { RoomObject } from './../interfaces/roomObject.interface';
@@ -95,7 +95,7 @@ export class EditRoomComponent implements OnInit, OnDestroy {
         private cdRef: ChangeDetectorRef,
     ) { }
 
-    @ViewChild('autosize') autosize: CdkTextareaAutosize;
+    @ViewChild('autosize', { static: false }) autosize: CdkTextareaAutosize;
 
     ngOnInit() {
         this.addRoomForm = this.roomServices.addRoomForm;

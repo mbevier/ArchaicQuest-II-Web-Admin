@@ -48,8 +48,8 @@ export class AddMobComponent implements OnInit {
         private ngZone: NgZone,
         private formBuilder: FormBuilder
     ) { }
-    @ViewChild(EquipmentComponent) equipmentComponent: EquipmentComponent;
-    @ViewChild('autosize') autosize: CdkTextareaAutosize;
+    @ViewChild(EquipmentComponent, { static: true }) equipmentComponent: EquipmentComponent;
+    @ViewChild('autosize', { static: true }) autosize: CdkTextareaAutosize;
 
     ngOnInit() {
         this.addMobForm = this.mobService.getAddMobForm();

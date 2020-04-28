@@ -13,8 +13,8 @@ export class ViewAreasComponent implements OnInit {
     displayedColumns: string[] = ['title', 'description', 'rooms', 'dateUpdated', 'actions'];
     dataSource: MatTableDataSource<Area>;
 
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
+    @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+    @ViewChild(MatSort, { static: false }) sort: MatSort;
 
     constructor(private service: ViewAreasService) {
 

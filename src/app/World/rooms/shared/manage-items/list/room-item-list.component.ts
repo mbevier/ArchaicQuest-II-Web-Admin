@@ -5,7 +5,7 @@ import { MatDialog } from '@angular/material';
 import { ItemSlotEnum } from 'src/app/items/interfaces/item-slot.enum';
 import { ItemSelectorComponent } from 'src/app/items/selectors/Item-selector/item-selector.component';
 import { ManageRoomItemsComponent } from '../add/manage-room-items.component';
-import { container } from '@angular/core/src/render3';
+import { container } from '@angular/core/esm5/src/render3';
 import { Shared } from 'src/app/shared/shared';
 
 

@@ -29,8 +29,8 @@ export class ViewAreaComponent implements OnInit {
     displayedColumns: string[] = ['id', 'name', 'coords'];
     dataSource: MatTableDataSource<Room>;
 
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
+    @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+    @ViewChild(MatSort, { static: false }) sort: MatSort;
     constructor(private service: ViewAreaService, private editAreaServices: EditService, private route: ActivatedRoute, private cd: ChangeDetectorRef) {
 
     }

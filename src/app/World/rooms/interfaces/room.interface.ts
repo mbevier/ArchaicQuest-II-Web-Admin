@@ -1,6 +1,6 @@
 
 import { Coords } from 'src/app/shared/interfaces/coords.interface';
-import { Player } from '@angular/core/src/render3/interfaces/player';
+import { Player } from '@angular/core/esm5/src/render3';
 import { RoomExit } from './roomExit.interface';
 import { RoomObject } from './roomObject.interface';
 import { Mob } from 'src/app/mobs/interfaces/mob.interface';

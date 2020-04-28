@@ -12,8 +12,8 @@ export class ViewItemsComponent implements OnInit {
     displayedColumns: string[] = ['id', 'name', 'itemType', 'slot', 'description', 'examDesc', 'roomDesc', 'weaponType', 'attackType', 'armourType', 'itemFlag', 'questItem', 'actions'];
     dataSource: MatTableDataSource<Item>;
 
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
+    @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+    @ViewChild(MatSort, { static: false }) sort: MatSort;
 
     constructor(private viewItemsService: ViewItemsService) {
 

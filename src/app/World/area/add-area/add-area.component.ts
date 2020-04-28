@@ -22,7 +22,7 @@ export class AddAreaComponent implements OnInit {
         private ngZone: NgZone,
     ) { }
 
-    @ViewChild('autosize') autosize: CdkTextareaAutosize;
+    @ViewChild('autosize', { static: true }) autosize: CdkTextareaAutosize;
 
     ngOnInit() {
         this.addRoomForm = this.areaServices.addAreaForm;

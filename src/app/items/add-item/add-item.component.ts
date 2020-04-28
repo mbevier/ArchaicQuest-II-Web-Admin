@@ -80,7 +80,7 @@ export class AddItemComponent implements OnDestroy, OnInit {
         private itemService: ItemService,
         private route: ActivatedRoute
     ) { }
-    @ViewChild('autosize')
+    @ViewChild('autosize', { static: false })
     autosize: CdkTextareaAutosize;
 
     ngOnInit() {
